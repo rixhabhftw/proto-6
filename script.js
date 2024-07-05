@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const surveyForm = document.getElementById('surveyForm');
     questions.forEach((q, index) => {
         const div = document.createElement('div');
-        div.className = "form-group";
+        div.classList.add('form-group');
         div.innerHTML = `
             <label>${index + 1}. ${q.question}</label>
             <div>
@@ -67,11 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         surveyForm.appendChild(div);
     });
 
-    const submitButton = document.createElement('button');
-    submitButton.type = "submit";
-    submitButton.className = "btn btn-primary btn-block";
-    submitButton.innerText = "Submit";
-    surveyForm.appendChild(submitButton);
+    surveyForm.innerHTML += '<button type="submit" class="btn btn-primary btn-block">Submit</button>';
 
     surveyForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -132,4 +128,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+
+// Particles.js configuration
+particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('particles.js loaded - callback');
 });

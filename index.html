@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
     <div id="particles-js"></div>
     <div class="container">
         <h1>Welcome to the Survey</h1>
-        <form id="userInfoForm">
+        <form id="introForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
@@ -17,11 +19,18 @@
             <button type="submit">Start Survey</button>
         </form>
     </div>
-    <script src="js/particles.js"></script>
-    <script src="index.js"></script>
     <script>
         particlesJS.load('particles-js', 'particles.json', function() {
             console.log('particles.js loaded - callback');
+        });
+        
+        document.getElementById('introForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            localStorage.setItem('name', name);
+            localStorage.setItem('email', email);
+            window.location.href = 'survey.html';
         });
     </script>
 </body>

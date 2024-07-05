@@ -1,6 +1,21 @@
 body {
-    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff4081, #81d4fa);
     font-family: Arial, sans-serif;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
 }
 
 h1 {
@@ -8,7 +23,7 @@ h1 {
 }
 
 form {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

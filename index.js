@@ -6,3 +6,8 @@ document.getElementById('userInfoForm').addEventListener('submit', function(e) {
     localStorage.setItem('email', email);
     window.location.href = 'survey.html';
 });
+
+// Particles.js configuration
+particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('particles.js loaded - callback');
+});

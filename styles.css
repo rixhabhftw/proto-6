@@ -1,11 +1,10 @@
+/* Body and container styles */
 body, html {
     height: 100%;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff4081, #81d4fa);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(45deg, #1e3c72, #2a5298);
+    color: #ffffff;
     overflow: hidden;
 }
 
@@ -13,7 +12,6 @@ body, html {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: cover;
     z-index: -1;
 }
 
@@ -23,39 +21,61 @@ body, html {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
 }
 
-h1 {
-    margin-bottom: 20px;
+/* Form styles */
+form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     color: #333;
-    font-weight: 700;
 }
 
-label {
-    font-weight: 500;
-    color: #333;
-}
-
-.btn-primary {
+button[type="submit"] {
     background: #007bff;
+    color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
     transition: background 0.3s ease;
 }
 
-.btn-primary:hover {
+button[type="submit"]:hover {
     background: #0056b3;
 }
 
-.form-group {
-    margin-bottom: 15px;
+/* Additional styles */
+label {
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }
 
-.form-control {
-    border-radius: 5px;
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 10px;
 }
 
 input[type="radio"] {
-    margin-left: 10px;
+    margin: 0 5px;
 }

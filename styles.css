@@ -1,95 +1,35 @@
-/* Body and container styles */
-body, html {
-    height: 100%;
+body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(45deg, #162447, #1f4068);
-    color: #ffffff;
+    padding: 0;
     overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff4081, #81d4fa);
+    font-family: Arial, sans-serif;
 }
 
 #particles-js {
     position: absolute;
     width: 100%;
     height: 100%;
+    background-size: cover;
     z-index: -1;
 }
 
-.container {
-    background: rgba(255, 255, 255, 0.85); /* Adjusted transparency */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    max-height: 90vh;
-    overflow-y: auto;
-    margin: 50px auto;
-    width: 80%;
-    max-width: 800px;
-}
-
-/* Form styles */
-form {
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #333;
-}
-
-input[type="text"], input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    color: #333;
-    background: rgba(255, 255, 255, 0.8);
-}
-
-button[type="submit"] {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background: #0056b3;
-}
-
-/* Additional styles */
-label {
-    color: #333;
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-}
-
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-form div {
-    margin-bottom: 10px;
+form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input[type="radio"] {
-    margin: 0 10px;
-    transform: scale(1.5); /* Increase size */
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
-        padding: 20px;
-    }
-
-    input[type="radio"] {
-        transform: scale(1.2); /* Adjust size for mobile */
-    }
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
 }

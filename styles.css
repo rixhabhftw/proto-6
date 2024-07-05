@@ -16,7 +16,7 @@ body, html {
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.85); /* Adjusted transparency */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -78,5 +78,18 @@ form div {
 }
 
 input[type="radio"] {
-    margin: 0 5px;
+    margin: 0 10px;
+    transform: scale(1.5); /* Increase size */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input[type="radio"] {
+        transform: scale(1.2); /* Adjust size for mobile */
+    }
 }
